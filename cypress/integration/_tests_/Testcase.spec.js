@@ -58,7 +58,7 @@ describe('Automation for Github application using Page Object Model', function (
     /* ---------User Navigates to Create Repository Page----------- */
 
     createRepoPage.repoNametxt().type(repoName); //Enter Repository name
-    createRepoPage.PublicRbtn().click(); //Check Public radio button
+    createRepoPage.publicRbtn().click(); //Check Public radio button
     createRepoPage.gitIgnoreCb().check(); // Check .gitignore checkbox
     createRepoPage.gitTemplateDd().click(); // Click on gitignore template drop down
     createRepoPage.gitIgnoreSearchbox().type(data.ignoreFile); // Search Node

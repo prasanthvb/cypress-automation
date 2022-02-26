@@ -7,7 +7,7 @@ class LoginPage {
         return cy.get('#password')
     }
 
-    signIn(){
+    signIn() {
         return cy.get('input[type="submit"]')
     }
 

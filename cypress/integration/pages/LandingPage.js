@@ -18,6 +18,6 @@ class LandingPage {
     newRepoBtn() {
         return cy.get('#repos-container > h2 > a:visible')
     }
-    
+
 }
 export default LandingPage;

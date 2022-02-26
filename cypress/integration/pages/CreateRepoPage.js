@@ -3,7 +3,7 @@ class CreateRepoPage {
     repoNametxt() {
         return cy.get('#repository_name')
     }
-    PublicRbtn() {
+    publicRbtn() {
         return cy.get('#repository_visibility_public')
     }
 
@@ -26,6 +26,6 @@ class CreateRepoPage {
     createRepoBtn() {
         return cy.get('.btn-primary')
     }
-    
+
 }
 export default CreateRepoPage;
