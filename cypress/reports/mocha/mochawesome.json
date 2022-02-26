@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-26T17:28:51.471Z",
+    "end": "2022-02-26T17:29:09.308Z",
+    "duration": 17837,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4218aaed-567b-4c5a-8605-b32876721f24",
+      "title": "",
+      "fullFile": "cypress/integration/_tests_/Testcase.spec.js",
+      "file": "cypress/integration/_tests_/Testcase.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "817e0d0f-60bc-4388-94ee-22e5c84acf56",
+          "title": "Automation for Github application using Page Object Model",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test to verify userName/email in user profile",
+              "fullTitle": "Automation for Github application using Page Object Model Test to verify userName/email in user profile",
+              "timedOut": null,
+              "duration": 6629,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click on view profile icon\nlandingPage.userProfile().click();\n/* Verify that the right username/email address is \ndisplayed on the text \"Signed in as <username/email address>\" */\nlandingPage.userName().should('contain.text', data.userName); //Click on the Sign-out button\nlandingPage.signout().should('be.enabled').click();",
+              "err": {},
+              "uuid": "51879f53-fb94-40c3-9a08-4a592abe3f42",
+              "parentUUID": "817e0d0f-60bc-4388-94ee-22e5c84acf56",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test to create and verify a new repository with .gitignore file",
+              "fullTitle": "Automation for Github application using Page Object Model Test to create and verify a new repository with .gitignore file",
+              "timedOut": null,
+              "duration": 11142,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click on New button to create a new repository\nlandingPage.newRepoBtn().click();\n/* ---------User Navigates to Create Repository Page----------- */\ncreateRepoPage.repoNametxt().type(repoName); //Enter Repository name\ncreateRepoPage.PublicRbtn().click(); //Check Public radio button\ncreateRepoPage.gitIgnoreCb().check(); // Check .gitignore checkbox\ncreateRepoPage.gitTemplateDd().click(); // Click on gitignore template drop down\ncreateRepoPage.gitIgnoreSearchbox().type(data.ignoreFile); // Search Node\ncreateRepoPage.visibleSearchFilter().should('contain.text', data.ignoreFile).click(); // Select Node\ncreateRepoPage.createRepoBtn().should('be.enabled').click(); // Click on the “Create repository” button\n/* ---------User Navigates to New Repository Page----------- */\n//Verify the New repository name\nnewRepoPage.repoName().should('contain.text', repoName); //Verify that the .gitignore file is added to repo\nnewRepoPage.gitIgnoreFile().should('be.visible'); //Click on user profile icon\nnewRepoPage.userProfile().click(); //Click on Signout button\nnewRepoPage.signout().click();",
+              "err": {},
+              "uuid": "df76818d-58a4-4416-82ee-f144be2e8aae",
+              "parentUUID": "817e0d0f-60bc-4388-94ee-22e5c84acf56",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "51879f53-fb94-40c3-9a08-4a592abe3f42",
+            "df76818d-58a4-4416-82ee-f144be2e8aae"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17771,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": true,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

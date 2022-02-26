@@ -1,0 +1,23 @@
+{
+    "defaultCommandTimeout": 40000,
+    "execTimeout": 40000,
+    "pageLoadTimeout": 40000,
+    "requestTimeout": 40000,
+    "responseTimeout": 40000,
+    "baseUrl": "https://github.com/login/",
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporterOptions": {
+            "reportDir": "cypress/reports/mocha",
+            "quite": true,
+            "overwrite": true,
+            "html": false,
+            "json": true
+        }
+    },
+    "testFiles" : "**/*/*.spec.js",
+    "env": {
+        "domainUrl": "https://github.com/login"
+      }
+}
